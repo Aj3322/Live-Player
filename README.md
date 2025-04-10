@@ -4,36 +4,56 @@
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-lightgrey)](https://flutter.dev)
 [![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 
-A professional-grade mobile application for streaming RTSP video feeds with real-time controls and recording capabilities. Perfect for IP camera monitoring, live broadcasting, and video surveillance.
+A professional mobile application for streaming RTSP video feeds with advanced recording management and connection history tracking. Ideal for IP camera monitoring, live broadcasting, and video surveillance.
 
-![App Preview]()
+![App Screenshot]()
 
 ## 🚀 Features
 
-- **📡 RTSP/Live Stream Playback**
-- **🔴 Recording with Visual Indicator**
-- **🔄 Auto-Reconnect (5 attempts)**
-- **📶 Connection Status Monitoring**
-- **🎮 Gesture Controls (Tap/Double Tap)**
-- **🌗 Adaptive UI for Low-Light Conditions**
-- **⏳ Buffering Optimization**
-- **📲 Full Screen Landscape Mode**
+### Core Functionality
+- **📡 RTSP/Live Stream Playback** with hardware acceleration
+- **🔴 In-app Recording** with file size and duration tracking
+- **🔄 Auto-Reconnect** (5 attempts with smart backoff)
+- **📶 Real-time Connection Status Monitoring**
+
+### History Management
+- **⏳ Connection History Tracking** with timestamps
+- **✏️ Editable Connection Entries** (Name/URL)
+- **🗑️ Bulk Clear History** with confirmation
+- **🔄 Swipe-to-Refresh** history list
+
+### Recording Management
+- **📼 Local Recording Storage** with metadata
+- **▶️ Direct Playback** from app interface
+- **📁 File Size & Duration Display** (MB/KB, MM:SS)
+- **🗑️ Recording Deletion** with confirmation
+
+### UI/UX
+- **🎮 Context Menu Actions** (Edit/Delete/Play)
+- **📱 Adaptive Lists** with card-based layout
+- **🌀 Loading States & Error Handling**
+- **🌓 Dark/Light Theme Support**
 
 ## 🛠 Tech Stack
 
-**Core Components**  
+### Core Components
 | Technology | Purpose | Version |
 |------------|---------|---------|
 | Flutter | Cross-platform UI Framework | 3.22+ |
 | flutter_vlc_player | RTSP Video Playback | ^8.1.0 |
 | Riverpod | State Management | ^2.4.8 |
-| Dart | Programming Language | 3.4+ |
+| Hive | Local Database | ^2.2.3 |
 
-**Key Packages**
+### Key Packages
 - `flutter_riverpod`: Reactive state management
-- `flutter_vlc_player`: VLC-powered video playback
-- `intl`: Internationalization support
+- `open_filex`: File handling operations
 - `path_provider`: Local storage access
+- `intl`: Internationalization support
+
+### State Management
+- `videoPlayerProvider`: Manages playback state
+- `connectionHistoryProvider`: Handles connection history
+- `videoRecordingProvider`: Manages recordings
 
 ## 📦 Installation
 
